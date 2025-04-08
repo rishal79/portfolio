@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <script src="./assets/js/script.js"></script>
+</head>
+<body>
+  <div class="container-fluid mt-3">
+    <div class="row d-flex">
+      <div class="col-auto p-0">
+
+        <!-- sidebar section  -->
+
+        <div class="sidebar">
+          <div class="profile">
+            <img src="./assets/images/avatar-1.png" class="profile" alt="Profile Picture" />
+            <div class="profile-content">
+
+              <p class="p-1 fw-bold"><strong>RISHAL P</strong></p>
+              <p class="designation"> full stack developer</p>
+            </div>
+           
+          </div>
+          <div class="info pb-1">
+             
+            <p> 
+                <i class="fa-solid fa-envelope"></i>
+                rishalp034@gmail.com
+            </p>
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +476743 45784</p>
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                kerala,india</p>
+          </div>
+          <div class="social-icons">
+            <a href="https://github.com/rishal79" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col main-content">
+
+        <!-- navbar section  -->
+
+        <div class="navbar-custom">
+          <div class="nav-items" id="nav-items-container">
+            <div class="nav-item" onclick="showSection('home', this)">Home</div>
+            <div class="nav-item" onclick="showSection('about', this)">About</div>
+            <div class="nav-item" onclick="showSection('projects', this)">Projects</div>
+            <div class="nav-item" onclick="showSection('contact', this)">Contact</div>
+          </div>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">
+          <i class="fas fa-moon"></i>
+        </button>
+        
+
+        <!-- Home Section -->
+
+        <div id="home" class="content-box section">
+          <h2 class="section-title">Welcome</h2>
+          <p>hello,iam rishal</p>
+          <p>website under construction.....</p>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">70%</div>
+          </div>
+          
+        </div>
+       
+        <!-- about section  -->
+
+        <div id="about" class="content-box section" style="display:none; text-align: justify;">
+            <h2 class="section-title">About Me</h2>
+            <p class="mb-4 about-cont">
+                I am a full stack developer with a passion for creating dynamic and responsive web applications.
+                With a strong foundation in both front-end and back-end technologies, I am capable of building
+                complete web solutions from scratch.My expertise includes working with various programming languages and frameworks, and I am alwayseager to learn new technologies and improve my skills. I enjoy collaborating with teams and contributing to open-source projects.
+            </p>
+  
+            <h4 class="mt-4 p-3">Skills</h4>
+            <div class="container d-flex flex-wrap justify-content-center gap-4 mb-5">
+               
+                    <img alt="Python"  src="https://skillicons.dev/icons?i=python" />
+                    <img alt="Django"  src="https://skillicons.dev/icons?i=django" />
+                    <img alt="JavaScript"  src="https://skillicons.dev/icons?i=js" />
+                    <img alt="MYSQL"  src="https://skillicons.dev/icons?i=mysql" />
+                    <img alt="HTML"  src="https://skillicons.dev/icons?i=html" />
+                    <img alt="CSS"  src="https://skillicons.dev/icons?i=css" />
+                    <img alt="SQLite"  src="https://skillicons.dev/icons?i=sqlite" />
+                    <img alt="PostgreSQL"  src="https://skillicons.dev/icons?i=postgres" />
+                    <img alt="Git"  src="https://skillicons.dev/icons?i=git" />
+                    <img alt="Docker"  src="https://skillicons.dev/icons?i=docker" />               
+                    <img alt="AWS"  src="https://skillicons.dev/icons?i=aws" />  
+                    <img alt="Linux"  src="https://skillicons.dev/icons?i=linux" />
+                    <img alt="Flask"  src="https://skillicons.dev/icons?i=flask" />
+                    <img alt="Angular"  src="https://skillicons.dev/icons?i=angular" />
+            </div>
+          </div>
+  
+
+       
+            <!-- project section  -->
+
+        <div class="content-box section project-container" id="projects" style="display:none;">
+            <div class="section-title">My Projects</div>
+            <div class="row g-4 flex-wrap pb-5 project-card">
+              <div class="col-md-4">
+                <div class="card p-3" onclick="showProjectDetail('Portfolio Website')">
+                  <img src="./assets/images/project-1.jpg" alt="Portfolio" class="project-img">
+                  <div class="card-body">
+                    <h5 class="card-title">Portfolio Website</h5>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card p-3" onclick="showProjectDetail('To-Do App')">
+                  <img src="./assets/images/project-2.png" alt="To-Do App" class="project-img">
+                  <div class="card-body">
+                    <h5 class="card-title">To-Do App</h5>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card p-3" onclick="showProjectDetail('Weather Dashboard')">
+                  <img src="./assets/images/project-3.jpg" alt="Weather Dashboard" class="project-img">
+                  <div class="card-body">
+                    <h5 class="card-title">Weather Dashboard</h5>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card p-3" onclick="showProjectDetail('Weather Dashboard')">
+                  <img src="./assets/images/project-4.png" alt="Weather Dashboard" class="project-img">
+                  <div class="card-body">
+                    <h5 class="card-title">Weather Dashboard</h5>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- project detail section -->
+
+          <div class="content-box section mt-4" id="project-detail" style="display: none;">
+            <div class="d-flex align-items-center mb-3">
+              <i class="fas fa-arrow-left me-3" style="cursor: pointer;" onclick="backToProjects()"></i>
+              <h4 class="mb-0" id="project-title">Project Title</h4>
+            </div>
+            <div class="mb-3">
+              <h6>Stack Used</h6>
+              <div class="d-flex align-items-center gap-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="30" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="30" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="30" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" width="30" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" width="30" />
+              </div>
+            </div>
+            <div>
+              <h6>Description</h6>
+              <p id="project-desc">Project description here...</p>
+            </div>
+          </div>
+          
+
+
+        <!-- Contact Section -->
+
+        <div id="contact" class="content-box section rounded pb-5" style="display: none;">
+            <h2 class="mb-4 fw-bold">Contact</h2>
+            <form autocomplete="off"> 
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" class="form-control" rows="5" placeholder="Your message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-warning text-white fw-semibold">
+                <i class="bi bi-send"></i> Send Message
+              </button>
+            </form>
+        </div>
+          
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
