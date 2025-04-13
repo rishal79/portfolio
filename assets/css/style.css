@@ -219,6 +219,27 @@
         float: right;
     }
 
+    .alert-box {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #ffc107;
+      color: #fff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-weight: 500;
+      z-index: 9999;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+    }
+  
+    .alert-success {
+      background-color: #28a745;
+    }
+  
+    .alert-error {
+      background-color: #dc3545;
+    }
     
     @media (max-width: 768px) {
       .row {
